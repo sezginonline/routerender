@@ -1,0 +1,20 @@
+<base href="http://localhost/myApp/">
+
+<a href="#/page1">Page 1</a> 
+<a href="#/page2">Page 2</a> 
+<a href="#/page3">Page 3</a>
+
+<div id="test1"><p>{status}{post}</p><hr></div>
+
+<div id="test2"><p>{status2}{post2}</p><hr></div>
+
+<script src="jquery.min.js"></script>
+<script src="jquery.routerender.js"></script>
+<script>
+function addRoutes() {
+	addRoute('#/page1', 'POST', 'http://localhost/myApp/page1.html', '#test1');
+	addRoute('#/page2', 'POST', 'http://localhost/myApp/page2.html', '#test1');
+	addRoute('#/page3', 'POST', 'http://localhost/myApp/page3.html', '#test1');
+}
+render('#test2', {"status2":"test2","post2":"test2"});
+</script>
