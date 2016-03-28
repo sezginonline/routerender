@@ -9,12 +9,13 @@ Add script to the webpage:
 ```
 
 Add some templates:
-<code>
+```html
 <div id="test1"><p>{status}{post}</p><hr></div>
 <div id="test2"><p>{status2}{post2}</p><hr></div>
-</code>
+```
 
 Add some routes via addRoute('hash', 'ajaxMethod', 'ajaxUrl', 'resultUpdateDomSelector'):
+```html
 <script>
 function addRoutes() {
 	addRoute('#/page1', 'POST', 'http://localhost/myApp/page1.html', '#test1');
@@ -22,8 +23,10 @@ function addRoutes() {
 	addRoute('#/page3', 'POST', 'http://localhost/myApp/page3.html', '#test1');
 }
 </script>
+```
 
 Ajax result example:
+```json
 [
 	{
 		"status": 100,
@@ -34,8 +37,11 @@ Ajax result example:
 		"post": "hi1"
 	}
 ]
+```
 
 If you would like, render some components via render('resultUpdateDomSelector', 'dataObject'):
+```html
 <script>
 render('#test2', {"status2":"test2","post2":"test2"});
 </script>
+```
