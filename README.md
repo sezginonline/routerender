@@ -1,10 +1,9 @@
 # routerender
-Jquery Router Render
-
-SPA (Single Page Application) with Jquery is easy with this plugin.
+Jquery Router Render for SPA (Single Page Application)
 
 Add script to the webpage:
 ```html
+<script src="jquery.min.js"></script>
 <script src="jquery.routerender.js"></script>
 ```
 
